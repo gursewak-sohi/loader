@@ -11,6 +11,7 @@
         slideFour = document.querySelector('[data-slide="4"]'),
         slideFive = document.querySelector('[data-slide="5"]'),
         progress = document.querySelector(".progress");
+
     if (modalLink && modalID && slideOne && slideTwo && slideThree && slideFour && slideFive && progress) {
         modalLink.onclick = (el) => {
                 let id = el.currentTarget.dataset.modal;
@@ -67,7 +68,7 @@
                                 progress.classList.remove('progress-green');
                                 progress.classList.add('progress-red');
                             }
-                            if (width >= 94) {
+                            if (width == 94) {
                                 clearInterval(interval);
                                 progress.classList.add('blink');
                                 setTimeout(() => {
