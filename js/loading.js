@@ -69,7 +69,9 @@
                             }
                             if (width >= 94) {
                                 clearInterval(interval);
+                                progress.classList.add('blink');
                                 setTimeout(() => {
+                                    progress.classList.remove('blink');
                                     setInterval(frame, 3 * 1000 / 100);
                                 }, 2000);
                             }
