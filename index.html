@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/loading.css">
+    <title>Animation</title>
+</head>
+
+<body>
+    <div id="loaderModal" class="modal">
+        <div class="modal-content">
+            <div data-slide="1" class="slide active">
+                <h4>Comprobando el número de cupos disponibles...</h4>
+                <img src="images/spinner.svg" alt="spiner" />
+            </div>
+            <div data-slide="2" class="slide">
+                <h4>Comprobando el número de cupos disponibles...</h4>
+            </div>
+            <div data-slide="3" class="slide">
+                <div class="progress-bar">
+                    <div class="progress progress-green" style="width: 1%;">1%</div>
+                </div>
+            </div>
+            <div data-slide="4" class="slide">
+                <h4>Disponibilidad: <span class="text-red">BAJA</span> </h4>
+            </div>
+            <div data-slide="5" class="slide">
+                <h4>Solo quedan 3 cupos. <br> Confirma tu lugar a continuación.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="modal-button">
+        <button data-modal="loaderModal" class="btn-modal">Open Modal</button>
+    </div>
+    <script src="js/loading.js"></script>
+</body>
+
+</html>

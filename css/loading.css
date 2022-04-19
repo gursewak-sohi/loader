@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.modal>* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal .modal-content {
+    width: 354px;
+    max-width: 90%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 48px;
+    min-height: 132px;
+    text-align: center;
+    transform: scale(2);
+    transition: 0.3s all ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal .modal-content h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.4px;
+    margin: 0;
+    text-align: center;
+}
+
+.modal .modal-content img {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.4px;
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.modal-button {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal .progress-bar {
+    width: 242px;
+    height: 20px;
+    border-radius: 4px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+    text-align: center;
+    line-height: 21px;
+}
+
+.modal .progress-green {
+    background-color: #15C900;
+}
+
+.modal .progress-red {
+    background-color: #FF0000;
+}
+
+.modal .text-red {
+    color: #FF0000;
+}
+
+.modal .modal-content .slide {
+    display: none;
+}
+
+.modal .modal-content .slide.active {
+    display: block;
+    animation: slide-up 300ms ease;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
