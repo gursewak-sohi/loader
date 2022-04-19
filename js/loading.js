@@ -35,7 +35,7 @@
                     // Call Progress (Will take total 5 seconds, 3s animation + 2s wait time at 95 progress)
                     progressBar();
                     setTimeout(() => {
-                        alert("Animation bar stopped");
+                        // alert("Animation bar stopped");
                         slideThree.classList.remove('active');
                         slideFour.classList.add('active');
                         setTimeout(() => {
