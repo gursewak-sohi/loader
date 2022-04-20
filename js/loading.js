@@ -30,29 +30,29 @@
             // progress.classList.add('progress-green');
             setTimeout(() => {
                 slideOne.classList.remove('active');
-                slideThree.classList.add('active');
-                // setTimeout(() => {
-                //     slideTwo.classList.remove('active');
-                //     slideThree.classList.add('active');
-                // Call Progress (Will take total 5 seconds, 3s animation + 2s wait time at 95 progress)
-                progress.classList.add('progress-start');
-                progressBar();
+                slideTwo.classList.add('active');
                 setTimeout(() => {
-                    // alert("Animation bar stopped");
-                    slideThree.classList.remove('active');
-                    slideFour.classList.add('active');
+                    slideTwo.classList.remove('active');
+                    slideThree.classList.add('active');
+                    // Call Progress (Will take total 5 seconds, 3s animation + 2s wait time at 95 progress)
+                    progress.classList.add('progress-start');
+                    progressBar();
                     setTimeout(() => {
-                        slideFour.classList.remove('active');
-                        slideFive.classList.add('active');
+                        // alert("Animation bar stopped");
+                        slideThree.classList.remove('active');
+                        slideFour.classList.add('active');
                         setTimeout(() => {
-                            // End Time
-                            console.timeEnd();
-                            slideFive.classList.remove('active');
-                            modalID.classList.remove('active');
+                            slideFour.classList.remove('active');
+                            slideFive.classList.add('active');
+                            setTimeout(() => {
+                                // End Time
+                                console.timeEnd();
+                                slideFive.classList.remove('active');
+                                modalID.classList.remove('active');
+                            }, 2000);
                         }, 2000);
-                    }, 2000);
-                }, 7000);
-                // }, 1000);
+                    }, 7000);
+                }, 2000);
             }, 3000);
 
             // Progress Bar Function
