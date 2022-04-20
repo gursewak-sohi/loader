@@ -134,7 +134,7 @@ body {
 
 .modal .modal-content .slide.active {
     display: block;
-    animation: opacity 1000ms ease;
+    /* animation: opacity 1000ms ease; */
 }
 
 .modal .blink {
