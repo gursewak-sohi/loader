@@ -13,7 +13,7 @@
         progress = document.querySelector(".progress"),
         progressWrapper = document.querySelector(".progress-bar");
 
-    if (modalLink && modalID && slideOne && slideThree && slideFour && slideFive && progress) {
+    if (modalID) {
         modalLink.onclick = (el) => {
                 let id = el.currentTarget.dataset.modal;
                 document.querySelector("#" + id).classList.add("active");
@@ -26,8 +26,6 @@
             console.time();
             slideOne.classList.add('active');
             slideFive.classList.remove('active');
-            // progress.classList.remove('progress-red');
-            // progress.classList.add('progress-green');
             setTimeout(() => {
                 slideOne.classList.remove('active');
                 slideTwo.classList.add('active');
@@ -64,19 +62,14 @@
                     const frame = () => {
                         if (width >= 95) {
                             clearInterval(interval);
-
                             progressWrapper.classList.add('blink');
                             setTimeout(() => {
                                 progressWrapper.classList.remove('blink');
                             }, 3000);
                             i = 0;
                         } else {
-                            if (width >= 60) {
-                                // progress.classList.remove('progress-green');
-                                // progress.classList.add('progress-red');
-                            }
+                            if (width >= 60) {}
                             width++;
-                            // progress.style.width = width + "%";
                             progress.innerHTML = width + "%";
                         }
                     }
