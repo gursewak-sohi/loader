@@ -4,57 +4,38 @@ body {
     margin: 0;
 }
 
-.modal>* {
+.c-modal>* {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.modal {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s all ease;
+.c-modal {
+    display: none;
 }
 
-.modal.active {
-    opacity: 1;
-    visibility: visible;
+.c-modal.active {
+    display: block;
 }
 
-.modal .modal-content {
-    width: 550px;
-    max-width: 90%;
+.c-modal .c-modal-content {
+    width: 630px;
+    max-width: 100%;
     margin: auto;
-    background-color: #fff;
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 30px 48px;
-    height: 210px;
+    /* height: 210px; */
     text-align: center;
-    transform: scale(2);
     transition: 0.3s all ease;
 }
 
-.modal.active .modal-content {
-    transform: scale(1);
-}
-
-.modal .modal-content h4 {
-    font-size: 22px;
+.c-modal .c-modal-content h4 {
+    font-size: 30px;
+    line-height: 40px;
     font-weight: 500;
     color: #000;
     letter-spacing: 0.4px;
@@ -62,34 +43,28 @@ body {
     text-align: center;
 }
 
-.modal .modal-content img {
+.c-modal .c-modal-content h5 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 0.4px;
+    margin: 0;
+    text-align: center;
+}
+
+.c-modal .c-modal-content img {
     width: 70px;
     height: 70px;
-    margin-top: 15px;
 }
 
-.modal-button {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.c-modal .c-modal-content h4+img {
+    margin-top: 25px;
 }
 
-.btn-modal {
-    padding: 10px 20px;
-    font-size: 14px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.modal .progress-bar {
+.c-modal .c-progress-bar {
     width: 100%;
-    height: 28px;
+    height: 34px;
     border-radius: 4px;
     margin-top: 30px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
@@ -98,7 +73,7 @@ body {
     overflow: hidden;
 }
 
-.modal .progress {
+.c-modal .c-progress {
     position: absolute;
     left: 0;
     top: 0;
@@ -107,42 +82,43 @@ body {
     font-weight: 600;
     font-size: 13px;
     text-align: center;
-    line-height: 28px;
+    line-height: 34px;
+    height: 100%;
     transition: 0.5s opacity ease;
 }
 
-.modal .progress-start {
+.c-modal .progress-start {
     -webkit-animation: progress 5s linear forwards;
     animation: progress 5s linear forwards;
 }
 
-.modal .progress-green {
+.c-modal .progress-green {
     background-color: #15C900;
 }
 
-.modal .progress-red {
+.c-modal .progress-red {
     background-color: #FF0000;
 }
 
-.modal .text-red {
+.c-modal .text-red {
     color: #FF0000;
 }
 
-.modal .modal-content .slide {
+.c-modal .c-modal-content .slide {
     display: none;
     transition: 0.5s all ease;
 }
 
-.modal .modal-content .slide.active {
+.c-modal .c-modal-content .slide.active {
     display: block;
 }
 
-.modal .blink {
+.c-modal .blink {
     -webkit-animation: blink 0.6s ease infinite;
     animation: blink 0.6s ease infinite;
 }
 
-.modal .font-bold {
+.c-modal .font-bold {
     font-weight: 700 !important;
 }
 
@@ -205,7 +181,21 @@ body {
 }
 
 @media (max-width:767px) {
-    .modal .modal-content h4 {
-        font-size: 17px;
+    .c-modal .c-modal-content {
+        padding: 20px;
+    }
+    .c-modal .c-modal-content h4 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .c-modal .c-modal-content h5 {
+        font-size: 30px;
+    }
+    .c-modal .c-progress-bar {
+        height: 28px;
+        margin-top: 20px;
+    }
+    .c-modal .c-progress {
+        line-height: 28px;
     }
 }
